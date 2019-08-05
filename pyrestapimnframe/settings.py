@@ -76,8 +76,17 @@ WSGI_APPLICATION = 'pyrestapimnframe.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #These two lines are for local running change them when testing local
+		#'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+		These below lines are for the server. 
+		'ENGINE': "django.db.backends.postgresql",
+        'NAME': "pyapisubcode",
+		'USER': "pyapisubcode",
+		'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+		'HOST': os.getenv("DATABASE_SERVICE_NAME"),
+		'PORT':"",
+		
     }
 }
 
