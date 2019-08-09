@@ -25,7 +25,7 @@ SECRET_KEY = '7z%#gckdfai@*(md!(p*-dg%)m7_72x2y=+$$8uem6mis7!0zj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [projectdjangoapi-billing2.apps.appcanvas.net]
+ALLOWED_HOSTS = ['projectdjangoapi-billing2.apps.appcanvas.net']
 
 
 # Application definition
