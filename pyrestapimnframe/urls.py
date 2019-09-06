@@ -17,12 +17,15 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
 from pyapisubcode.resources import NoteResource
+from mfsubcodeapi.resources import SbCodeResource
 
 note_resources = NoteResource()
-
+print('tyaga here')
+subcode_resource = SbCodeResource()
 urlpatterns = [
     path(r'^admin/', admin.site.urls),
-	#path(r'^pyapisubcode/',include(note_resources.urls)),
-	url(r'^pyapisubcode/',include(note_resources.urls))
+	url(r'^pyapisubcode/',include(note_resources.urls)),
+	url(r'^mfsubcodeapi/', include('mfsubcodeapi.urls')),
+	#url(r'^mfsubcodeapi/',include(subcode_resource.urls))
 	
 ]

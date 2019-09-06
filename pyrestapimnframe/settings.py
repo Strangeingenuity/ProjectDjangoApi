@@ -25,12 +25,13 @@ SECRET_KEY = '7z%#gckdfai@*(md!(p*-dg%)m7_72x2y=+$$8uem6mis7!0zj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['projectdjangoapi-billing2.apps.appcanvas.net']
+ALLOWED_HOSTS = ['projectdjangoapi-billing2.apps.appcanvas.net','127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+	'mfsubcodeapi',
 	'pyapisubcode',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -77,15 +79,15 @@ WSGI_APPLICATION = 'pyrestapimnframe.wsgi.application'
 DATABASES = {
     'default': {
         #These two lines are for local running change them when testing local
-		#'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+		'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 		#These below lines are for the server. 
-		'ENGINE': "django.db.backends.postgresql_psycopg2",
-        'NAME': "testdb",
-		'USER': "testuser",
-		'PASSWORD': os.getenv("DATABASE_PASSWORD"),
-		'HOST': os.getenv("DATABASE_SERVICE_NAME"),
-		'PORT':"",
+		#'ENGINE': "django.db.backends.postgresql_psycopg2",
+        #'NAME': "testdb",
+		#'USER': "testuser",
+		#'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+		#'HOST': os.getenv("DATABASE_SERVICE_NAME"),
+		#'PORT':"",
 		
     }
 }
