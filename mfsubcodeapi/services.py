@@ -38,7 +38,7 @@ def get_animals():
 						}
 			]           
 	}
-	response = requests.post(url, json=payload,auth=HTTPBasicAuth('dir01tp','$Lik2w3e'))		 
+	response = requests.post(url, json=payload,auth=HTTPBasicAuth('dir01tp','$Lik3e4r'))		 
 	animal_list = response.text
 	animal_list = json.loads(response.text)
 	return animal_list
